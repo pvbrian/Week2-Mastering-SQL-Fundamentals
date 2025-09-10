@@ -1,11 +1,11 @@
 ## Table of Contents:
-1) [INNER JOIN](1-inner-join)
-2) [LEFT JOIN](2-left-join) 
-3) [RIGHT JOIN](3-right-join)
-4) [FULL JOIN](4-full-join)
-5) [SELF JOIN](5-self-join)
-6) [UNIONS](6-unions)
-7) [UNION ALL](7-union-all)
+1) [INNER JOIN](#1-inner-join)
+2) [LEFT JOIN](#2-left-join) 
+3) [RIGHT JOIN](#3-right-join)
+4) [FULL JOIN](#4-full-join)
+5) [SELF JOIN](#5-self-join)
+6) [UNIONS](#6-unions)
+7) [UNION ALL](#7-union-all)
 
 ### 1. INNER JOIN
 The INNER JOIN is the most common type of join. It returns only the rows where there is a match in both tables based on the join condition.

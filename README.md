@@ -13,7 +13,6 @@ Focused on developing SQL Query skills
 - Here's [Day 5 Notes](Day5_Notes.md)
 
 ### Bonus Resources:
-- [Datasets Folder](Datasets)
 
 - [SQL Order of Execution](SQL_Order_of_Execution.md)
 

@@ -1,7 +1,7 @@
 # Table of contents:
-1) [SubQuery](1-subquery)
-2) [CTEs](2-common-table-expressions)
-3) [When To Use a SubQuery or CTE](3-when-to-choose)
+1) [SubQuery](#1-subquery)
+2) [CTEs](#2-common-table-expressions)
+3) [When To Use a SubQuery or CTE](#3-when-to-choose)
 
 ## 1. SubQuery
 - A subquery is a SELECT statement nested inside another SQL statement.
@@ -101,7 +101,8 @@ WITH cte_name (optional_column_names) AS (
     FROM ...
     WHERE ...
 )
-SELECT * FROM cte_name;
+SELECT * 
+FROM cte_name;
 ```
 
 Benefits

@@ -1,9 +1,9 @@
 ## Table of Contents:
-1) [SELECT Statement](1-select-statement)
-2) [DISINCT Function](2-distinct-function)
-3) [Aliases](3-aliases)
-4) [WHERE](4-where)
-5) [Wild Cards (LIKE operators)](5-wild-cards)
+1) [SELECT Statement](#1-select-statement)
+2) [DISINCT Function](#2-distinct-function)
+3) [Aliases](#3-aliases)
+4) [WHERE](#4-where)
+5) [Wild Cards (LIKE operators)](#5-wild-cards)
 
 ### 1. SELECT statement
 - The SELECT statement is the most fundamental and used SQL command.
