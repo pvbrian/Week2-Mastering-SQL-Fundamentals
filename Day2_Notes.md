@@ -1,11 +1,11 @@
 ## Table of Contents:
-1) [SQL Math Functions](1-sql-math-functions)
-2) [SQL Aggregate Functions](2-sql-aggregate-functions)
-3) [SQL String Functions](3-sql-string-functions)
-4) [SQL Date Functions](4-sql-date-functions)
-5) [GROUP BY](5-group-by) 
-6) [HAVING](6-having)
-7) [ORDER BY, LIMIT, OFFSET (and FETCH)](7-order-by)
+1) [SQL Math Functions](#1-sql-math-functions)
+2) [SQL Aggregate Functions](#2-sql-aggregate-functions)
+3) [SQL String Functions](#3-sql-string-functions)
+4) [SQL Date Functions](#4-sql-date-functions)
+5) [GROUP BY](#5-group-by) 
+6) [HAVING](#6-having)
+7) [ORDER BY, LIMIT, OFFSET (and FETCH)](#7-order-by)
 
 ### 1. SQL Math Functions
 Math functions perform operations on numerical data to manipulate values or calculate new ones. They are used primarily in the SELECT clause or the WHERE clause.
@@ -157,17 +157,24 @@ The GROUP BY clause groups rows that have the same values in specified columns i
 
 ```sql
 -- Count the number of employees in each department
-SELECT department, COUNT(*) AS employee_count
+SELECT 
+      department, 
+     COUNT(*) AS employee_count
 FROM employees
 GROUP BY department;
 
 -- Find the total sales for each product
-SELECT product_id, SUM(sale_amount) AS total_revenue
+SELECT 
+      product_id, 
+      SUM(sale_amount) AS total_revenue
 FROM sales
 GROUP BY product_id;
 
 -- Find the average salary by department and country
-SELECT department, country, AVG(salary) AS avg_salary
+SELECT 
+      department, 
+      country, 
+      AVG(salary) AS avg_salary
 FROM employees
 GROUP BY department, country; -- Groups by unique dept/country pairs
 ```
@@ -186,19 +193,25 @@ The HAVING clause is used to filter groups created by the GROUP BY clause. It is
 
 ```sql
 -- Find departments with more than 10 employees
-SELECT department, COUNT(*) AS employee_count
+SELECT 
+      department, 
+      COUNT(*) AS employee_count
 FROM employees
 GROUP BY department
 HAVING COUNT(*) > 10; -- Filter on the aggregated result
 
 -- Find products with total revenue over $10,000
-SELECT product_id, SUM(sale_amount) AS total_revenue
+SELECT 
+      product_id, 
+      SUM(sale_amount) AS total_revenue
 FROM sales
 GROUP BY product_id
 HAVING SUM(sale_amount) > 10000;
 
 -- Find countries where the average salary is over 50000
-SELECT country, AVG(salary) AS avg_salary
+SELECT 
+      country, 
+      AVG(salary) AS avg_salary
 FROM employees
 GROUP BY country
 HAVING AVG(salary) > 50000;
@@ -226,25 +239,34 @@ LIMIT / OFFSET (and FETCH)
 
 ```sql
 -- Get the top 10 highest-paid employees
-SELECT first_name, last_name, salary
+SELECT 
+     first_name, 
+     last_name, 
+     salary
 FROM employees
 ORDER BY salary DESC
 LIMIT 10;
 
 -- Pagination: Get rows 11 to 20 (e.g., page 2 of results with 10 items per page)
-SELECT product_name, price
+SELECT 
+      product_name, 
+      price
 FROM products
 ORDER BY product_name
 LIMIT 10 OFFSET 10; -- Skip first 10, return next 10
 
 -- Standard SQL version of pagination
-SELECT product_name, price
+SELECT 
+      product_name, 
+      price
 FROM products
 ORDER BY product_name
 OFFSET 10 ROWS FETCH NEXT 10 ROWS ONLY;
 
 -- Sort by an alias defined in the SELECT clause
-SELECT department, AVG(salary) AS avg_sal
+SELECT 
+     department, 
+     AVG(salary) AS avg_sal
 FROM employees
 GROUP BY department
 ORDER BY avg_sal DESC;

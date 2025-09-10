@@ -27,12 +27,15 @@
 ```sql
 -- Create a view for total sales per customer
 CREATE VIEW customer_sales AS
-SELECT customer_id, SUM(amount) AS total_amount
+SELECT 
+      customer_id, 
+      SUM(amount) AS total_amount
 FROM sales
 GROUP BY customer_id;
 
 -- Use the view
-SELECT * FROM customer_sales
+SELECT *
+FROM customer_sales
 WHERE total_amount > 1000;
 
 -- Drop View
